@@ -21,8 +21,8 @@ const Mission = ({ mission, index }: any) => {
                         (mission.mission_id.length > 0)
                             ? <ul>
                                 {
-                                    mission.mission_id.map((mission_id: any, index: number) => {
-                                        return (<li key={index}>{mission_id}</li>)
+                                    mission.mission_id.map((missionID: any, index: number) => {
+                                        return (<li key={index}>{missionID}</li>)
                                     })
                                 }
                             </ul>
@@ -36,14 +36,14 @@ const Mission = ({ mission, index }: any) => {
                 <div className="value">{mission.launch_year}</div>
             </div>
             <div className="mission-info">
-                <div className="label">Successfull Launch</div>
+                <div className="label">Successfull Launch:</div>
                 <div className="value">
-                    {mission.launch_success ? <i className="fa fa-check-circle"></i> : <i className="fa fa-circle-o"></i>}
+                    {mission.launch_success ? <i className="fa fa-check-circle success"></i> : <i className="fa fa-times-circle-o failed"></i>}
                 </div>
             </div>
             <div className="mission-info">
-                <div className="label">Successfull Landing</div>
-                {mission.launch_success ? <i className="fa fa-check-circle"></i> : <i className="fa fa-circle-o"></i>}
+                <div className="label">Successfull Landing:</div>
+                {mission.launch_success ? <i className="fa fa-check-circle success"></i> : <i className="fa fa-times-circle-o failed"></i>}
             </div>
         </div>
     )

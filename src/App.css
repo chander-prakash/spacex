@@ -217,6 +217,13 @@ body{
     justify-content: center;
 }
 
+.success {
+    color: #009612;
+}
+
+.failed {
+    color: #ff0000;
+}
 
 /* Responsive code */
 
