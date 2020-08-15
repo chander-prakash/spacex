@@ -12,6 +12,11 @@ SpaceX Launch Program is a source to showcase all the launch events. Where you c
   - Can filter the launches with Successful Landing (* API is not working right now)
 
 
+# Code Quality!
+
+  - React-App Eslinter configuration installed
+  - Husky setup to check pre and post commit
+
 ### Installation
 
 SpaceX requires [Node.js](https://nodejs.org/) v10+ to run.

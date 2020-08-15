@@ -1,7 +1,7 @@
-import React from "react";
+/* eslint-disable indent */
+import React from 'react'
 
 const Mission = ({ mission, index }: any) => {
-
     console.log('mission', mission)
     return (
         <div className="spacex-mission">
@@ -18,16 +18,15 @@ const Mission = ({ mission, index }: any) => {
                 <div className="label">Mission Ids:</div>
                 <div className="value">
                     {
-                        (mission.mission_id.length > 0) ?
-                            <ul>
+                        (mission.mission_id.length > 0)
+                            ? <ul>
                                 {
                                     mission.mission_id.map((mission_id: any, index: number) => {
                                         return (<li key={index}>{mission_id}</li>)
                                     })
                                 }
                             </ul>
-                            :
-                            "No Data"
+                            : 'No Data'
                     }
 
                 </div>
@@ -50,4 +49,4 @@ const Mission = ({ mission, index }: any) => {
     )
 }
 
-export default Mission;
+export default Mission

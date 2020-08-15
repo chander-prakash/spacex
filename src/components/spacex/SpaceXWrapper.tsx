@@ -1,10 +1,10 @@
-import React, { useContext } from "react";
-import { MissionContext } from "./../../context/mission";
-import Mission from "./Mission";
+/* eslint-disable indent */
+import React, { useContext } from 'react'
+import { MissionContext } from './../../context/mission'
+import Mission from './Mission'
 
 const SpaceXWrapper = () => {
-
-    const { missions, isLoading } = useContext(MissionContext);
+    const { missions, isLoading } = useContext(MissionContext)
 
     return (
         <div className="spacex-container">
@@ -28,4 +28,4 @@ const SpaceXWrapper = () => {
     )
 }
 
-export default SpaceXWrapper;
+export default SpaceXWrapper

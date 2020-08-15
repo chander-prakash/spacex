@@ -1,4 +1,5 @@
-import React from "react";
+/* eslint-disable indent */
+import React from 'react'
 
 interface Filter {
     header: string,
@@ -13,17 +14,14 @@ interface PropType {
 
 }
 const Filter = ({ history, filter, selectedFilters }: PropType) => {
-
-
     const setFilter = (value: string) => {
-
-        let selectedValues = Object.assign({}, selectedFilters);
+        const selectedValues = Object.assign({}, selectedFilters)
 
         // checking if same tile clicked, then remove the value
-        selectedValues[filter.key] = ((selectedValues[filter.key] == value) ? null : value);
+        selectedValues[filter.key] = ((selectedValues[filter.key] == value) ? null : value)
 
         // generating query parameters
-        let query = Object.keys(selectedValues).map(key => selectedValues[key] !== null ? `${key}=${selectedValues[key]}` : null).filter((val) => val !== null).join("&");
+        const query = Object.keys(selectedValues).map(key => selectedValues[key] !== null ? `${key}=${selectedValues[key]}` : null).filter((val) => val !== null).join('&')
         history.replace(`/?${query}`)
     }
 
@@ -48,5 +46,4 @@ const Filter = ({ history, filter, selectedFilters }: PropType) => {
     )
 }
 
-
-export default Filter;
+export default Filter
