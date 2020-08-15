@@ -29,6 +29,19 @@ $ npm install
 $ npm run start
 ```
 
+
+### Deploying
+
+SpaceX requires [Heroku Cli].
+
+Install the dependencies and devDependencies and start the server.
+
+```sh
+$ heroku create space-s --buildpack mars/create-react-app 
+$ git push heroku master
+$ heroku open
+```
+
 # React-Testing 
     - Use Jest to implement unit testing
     - Testing Coverage
