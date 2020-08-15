@@ -10,6 +10,7 @@
     "@types/node": "^12.0.0",
     "@types/react-dom": "^16.9.8",
     "@types/react-router-dom": "^5.1.5",
+    "husky": "^4.2.5",
     "jest": "24.9.0",
     "query-string": "^6.13.1",
     "react": "^16.13.1",
@@ -21,11 +22,16 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "ssr": "node server/index.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "test:watch": "jest --watch",
+    "lint": "eslint src",
     "eject": "react-scripts eject"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm test",
+      "pre-push": "npm run lint && npm test"
+    }
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -44,6 +50,15 @@
   },
   "devDependencies": {
     "@types/react": "^16.9.46",
+    "@typescript-eslint/eslint-plugin": "^3.9.0",
+    "@typescript-eslint/parser": "^3.9.0",
+    "eslint": "^7.7.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-standard": "^4.0.1",
     "webpack-cli": "^3.3.12"
   }
 }

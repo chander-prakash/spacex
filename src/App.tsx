@@ -1,14 +1,13 @@
-import React from "react";
-import { BrowserRouter } from 'react-router-dom';
-import './App.css';
-import FilterWrapper from "./components/filter/FilterWrapper";
+/* eslint-disable space-before-function-paren */
+import React from 'react'
+import { BrowserRouter } from 'react-router-dom'
+import './App.css'
+import FilterWrapper from './components/filter/FilterWrapper'
 // importing filters component
-import HeaderWrapper from "./components/header/HeaderWrapper";
-import SpaceXWrapper from "./components/spacex/SpaceXWrapper";
+import HeaderWrapper from './components/header/HeaderWrapper'
+import SpaceXWrapper from './components/spacex/SpaceXWrapper'
 // import the provider
-import { MissionProvider } from "./context/mission";
-
-
+import { MissionProvider } from './context/mission'
 
 function App() {
   return (
@@ -28,7 +27,7 @@ function App() {
         </div>
       </MissionProvider>
     </BrowserRouter>
-  );
+  )
 }
 
-export default App;
+export default App
