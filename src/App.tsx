@@ -1,5 +1,5 @@
 /* eslint-disable space-before-function-paren */
-import React from 'react'
+import React, { Suspense } from 'react'
 import { BrowserRouter } from 'react-router-dom'
 import './App.css'
 import FilterWrapper from './components/filter/FilterWrapper'
@@ -17,9 +17,10 @@ function App() {
           <HeaderWrapper />
           <div className="body-container">
             <FilterWrapper />
-            <SpaceXWrapper />
+            <Suspense fallback={() => <div className='loader'>Loading...</div>}>
+              <SpaceXWrapper />
+            </Suspense>
           </div>
-
         </div>
         <div className="footer">
           <h3>Developed by:</h3>

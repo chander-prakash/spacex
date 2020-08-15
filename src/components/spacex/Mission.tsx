@@ -6,8 +6,8 @@ const Mission = ({ mission, index }: any) => {
     return (
         <div className="spacex-mission">
             <div className="img-group">
-                <img src={mission.links.mission_patch_small}
-                    alt={mission.details} />
+                <img src={(mission.links.mission_patch_small) ? mission.links.mission_patch_small : 'images/not_available.png'}
+                    alt={(mission.details) ? mission.details : mission.rocket.rocket_name} />
             </div>
 
             <div className="mission-info title">
