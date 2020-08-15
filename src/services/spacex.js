@@ -1,7 +1,6 @@
-const { queryByRole } = require("@testing-library/react")
-
+/* eslint-disable indent */
 module.exports = {
     getApiData: (queryString) => {
-        return fetch(`https://api.spacexdata.com/v3/launches?${queryString}`).then(res => res.json());
+        return fetch(`https://api.spacexdata.com/v3/launches?${queryString}`).then(res => res.json())
     }
 }
