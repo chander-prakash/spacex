@@ -16,6 +16,8 @@ SpaceX Launch Program is a source to showcase all the launch events. Where you c
 
   - React-App Eslinter configuration installed
   - Husky setup to check pre and post commit
+  - Hooks on Before push to Git, checking for Linting
+  - Hooks on Before push to Git, running all the test cases
 
 ### Installation
 
@@ -41,6 +43,14 @@ $ heroku create space-s --buildpack mars/create-react-app
 $ git push heroku master
 $ heroku open
 ```
+
+### Deploying CI/CD
+SpaceX Auto Deployed to [Project](https://space-s.herokuapp.com/)
+
+```sh
+$ Push to master, auto deploy on heroku
+```
+
 
 # React-Testing 
     - Use Jest to implement unit testing
