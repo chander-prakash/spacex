@@ -71,16 +71,16 @@ SpaceX uses a number of open source projects to work properly:
 
 
 # Filter Screen
-![FilterScreen](/images/screenshot/filter.png)
+![FilterScreen](/public/images/screenshot/filter.png)
 
 
 # SpaceX Missions Screen
-![SpaceXMissions](/images/screenshot/spacex.png)
+![SpaceXMissions](/public/images/screenshot/spacex.png)
 
 
 # SpaceX Project Screen
-![SpaceXProject](/images/screenshot/project.png)
+![SpaceXProject](/public/images/screenshot/project.png)
 
 
-And of course SpaceX itself is open source with a [public repository][https://github.com/chander-prakash/spacex]
+And of course SpaceX itself is open source with a [public repository](https://github.com/chander-prakash/spacex)
  on GitHub.
