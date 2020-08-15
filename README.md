@@ -2,14 +2,16 @@
 
 [Github](https://github.com/chander-prakash/spacex)
 
-SpaceX Launch Program is a source to showcase all the launch events. Where you can filter the results on multiple basis. Year, Successful Landing and Successful Launch filter's are provided to ease the use.
+SpaceX is a website to source information of all the launch programs. It gives you multiple filter options for results. 
+[Project Link](https://space-s.herokuapp.com/)
+
 
 
 # Features!
 
-  - Can filter the launches with Year
-  - Can filter the launches with Successful Launch
-  - Can filter the launches with Successful Landing (* API is not working right now)
+  - Can filter the launches by Year
+  - Can filter the launches by Successful Launch
+  - Can filter the launches by Successful Landing (* API is not working right now)
 
 
 # Code Quality!
@@ -32,7 +34,7 @@ $ npm run start
 ```
 
 
-### Deploying
+### Manual Deploying
 
 SpaceX requires [Heroku Cli].
 
