@@ -4,9 +4,7 @@ const HeaderWrapper = () => {
     return (
         <div className="header">
             <i className="fa fa-rocket" aria-hidden="true"></i>
-            <h2>
-                SpaceX Launch Programs
-      </h2>
+            <h2>SpaceX Launch Programs</h2>
         </div>
     )
 }

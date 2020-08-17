@@ -2,7 +2,6 @@
 import React from 'react'
 
 const Mission = ({ mission, index }: any) => {
-    console.log('mission', mission)
     return (
         <div className="spacex-mission">
             <div className="img-group">

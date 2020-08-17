@@ -83,6 +83,8 @@ SpaceX uses a number of open source projects to work properly:
 # SpaceX Project Screen
 ![SpaceXProject](/public/images/screenshot/project.png)
 
+# Performance Score &  Accessibility Score
+![Score](/public/images/screenshot/score.png)
 
 And of course SpaceX itself is open source with a [public repository](https://github.com/chander-prakash/spacex)
  on GitHub.

@@ -29,21 +29,16 @@ const FilterWrapper = ({ history, location }: any) => {
         launch_success: null,
         landing_success: null
     })
+
     // filter options
-
     const filters: FilterValues = getFilters()
-
-    // checking for refresh and updating the state, it run's only once
-    useEffect(() => {
-        checkCounterAndUdpate()
-    }, [])
 
     // updating the counter
     useEffect(() => {
         checkCounterAndUdpate()
     }, [location.search])
 
-    const checkCounterAndUdpate = () => {
+    const checkCounterAndUdpate = async () => {
         const params = queryString.parse(location.search)
         let counter = 0
 
@@ -71,21 +66,20 @@ const FilterWrapper = ({ history, location }: any) => {
         setIsLoading(true)
 
         // calling API
-        getApiData(queryString.stringify(filterValues)).then((missions) => {
-            setIsLoading(false)
-            setMissions(missions)
-        })
+        const missions = await getApiData(queryString.stringify(filterValues))
+        setIsLoading(false)
+        setMissions(missions)
     }
 
     return (
         <div className='filters-container'>
             <div className='filter-header'>
-                <h4>
+                <h3>
                     Filters
-        </h4>
+                </h3>
                 <div className='selected-filter-count'>
                     {selectedFilterCount}/3
-        </div>
+                </div>
             </div>
 
             <div className='filter-groups'>
