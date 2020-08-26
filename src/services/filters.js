@@ -11,12 +11,14 @@ module.exports = {
                 header: 'Successfull Launch',
                 values: ['true', 'false'],
                 key: 'launch_success'
-            },
-            landing_success: {
-                header: 'Successfull Landing',
-                values: ['true', 'false'],
-                key: 'landing_success'
             }
+
+            // filter is not working
+            // landing_success: {
+            //     header: 'Successfull Landing',
+            //     values: ['true', 'false'],
+            //     key: 'landing_success'
+            // }
         }
     }
 }

@@ -2,10 +2,10 @@
 import React from 'react'
 const HeaderWrapper = () => {
     return (
-        <div className="header">
+        <header className="header">
             <i className="fa fa-rocket" aria-hidden="true"></i>
-            <h2>SpaceX Launch Programs</h2>
-        </div>
+            <h1>SpaceX Launch Programs</h1>
+        </header>
     )
 }
 

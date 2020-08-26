@@ -72,17 +72,17 @@ const FilterWrapper = ({ history, location }: any) => {
     }
 
     return (
-        <div className='filters-container'>
-            <div className='filter-header'>
-                <h3>
+        <aside className='filters-container'>
+            <header className='filter-header'>
+                <h2>
                     Filters
-                </h3>
+                </h2>
                 <div className='selected-filter-count'>
                     {selectedFilterCount}/3
                 </div>
-            </div>
+            </header>
 
-            <div className='filter-groups'>
+            <section className='filter-groups'>
                 {/* Each Filter's */}
 
                 {
@@ -92,8 +92,8 @@ const FilterWrapper = ({ history, location }: any) => {
                         )
                     })
                 }
-            </div>
-        </div>
+            </section>
+        </aside>
     )
 }
 

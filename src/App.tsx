@@ -2,6 +2,7 @@
 import React, { Suspense } from 'react'
 import { BrowserRouter } from 'react-router-dom'
 import './App.css'
+import Loader from './components/common/Loader'
 import FilterWrapper from './components/filter/FilterWrapper'
 // importing filters component
 import HeaderWrapper from './components/header/HeaderWrapper'
@@ -13,19 +14,19 @@ function App() {
   return (
     <BrowserRouter>
       <MissionProvider>
-        <div className="container">
+        <section className="container" role="main">
           <HeaderWrapper />
-          <div className="body-container">
+          <section className="body-container">
             <FilterWrapper />
-            <Suspense fallback={() => <div className='loader'>Loading...</div>}>
+            <Suspense fallback={<Loader />}>
               <SpaceXWrapper />
             </Suspense>
-          </div>
-        </div>
-        <div className="footer">
+          </section>
+        </section>
+        <footer className="footer">
           <h2>Developed by:</h2>
           <span>Chander Prakash</span>
-        </div>
+        </footer>
       </MissionProvider>
     </BrowserRouter>
   )
