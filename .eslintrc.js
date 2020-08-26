@@ -20,6 +20,6 @@ module.exports = {
     '@typescript-eslint'
   ],
   rules: {
-    "indent": "off"
+    indent: 'off'
   }
 }

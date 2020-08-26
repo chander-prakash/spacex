@@ -1,12 +1,16 @@
 /* eslint-disable indent */
-import React from 'react'
+import React, { lazy, Suspense } from 'react'
+
+const Img = lazy(() => import('./Img'))
 
 const Mission = ({ mission, index }: any) => {
+    const loading = () => <h1>Loading...</h1>
     return (
         <div className="spacex-mission">
             <div className="img-group">
-                <img src={(mission.links.mission_patch_small) ? mission.links.mission_patch_small : 'images/not_available.png'}
-                    alt={(mission.details) ? mission.details : mission.rocket.rocket_name} />
+                <Suspense fallback={loading()}>
+                    <Img src={mission.links.mission_patch_small} alt={mission.details} name={mission.rocket.rocket_name} />
+                </Suspense>
             </div>
 
             <div className="mission-info title">

@@ -11,11 +11,7 @@ const SpaceXWrapper = () => {
             {isLoading && <div className="loader">Loading...</div>}
             <div className="spacex-missions">
                 {
-                    missions.map((mission: any, index: number) => {
-                        return (
-                            <Mission mission={mission} key={index} />
-                        )
-                    })
+                    missions.map((mission: any, index: number) => <Mission mission={mission} key={index} />)
                 }
             </div>
 
