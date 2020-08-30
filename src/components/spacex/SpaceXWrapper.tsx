@@ -7,16 +7,10 @@ const SpaceXWrapper = () => {
     const { missions, isLoading } = useContext(MissionContext)
 
     return (
-        <div className="spacex-container">
+        <section className="spacex-container">
             {isLoading && <div className="loader">Loading...</div>}
             <div className="spacex-missions">
-                {
-                    missions.map((mission: any, index: number) => {
-                        return (
-                            <Mission mission={mission} key={index} />
-                        )
-                    })
-                }
+                {missions.map((mission: any, index: number) => <Mission mission={mission} key={index} />)}
             </div>
 
             {/* showing no result */}
@@ -24,7 +18,7 @@ const SpaceXWrapper = () => {
                 (!isLoading && missions.length === 0) &&
                 <div className="no-result">No Result</div>
             }
-        </div>
+        </section>
     )
 }
 

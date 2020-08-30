@@ -18,7 +18,7 @@ const Filter = ({ history, filter, selectedFilters }: PropType) => {
         const selectedValues = Object.assign({}, selectedFilters)
 
         // checking if same tile clicked, then remove the value
-        selectedValues[filter.key] = ((selectedValues[filter.key] == value) ? null : value)
+        selectedValues[filter.key] = ((selectedValues[filter.key] === value) ? null : value)
 
         // generating query parameters
         const query = Object.keys(selectedValues).map(key => selectedValues[key] !== null ? `${key}=${selectedValues[key]}` : null).filter((val) => val !== null).join('&')
@@ -26,7 +26,7 @@ const Filter = ({ history, filter, selectedFilters }: PropType) => {
     }
 
     return (
-        <div className="filter-group">
+        <article className="filter-group">
             <div className="filter-group-header">
                 <span>{filter.header}</span>
             </div>
@@ -34,15 +34,15 @@ const Filter = ({ history, filter, selectedFilters }: PropType) => {
                 {
                     filter.values.map((value: any, index: number) => {
                         return (
-                            <div className={`filter-group-item ${(selectedFilters[filter.key] == value && 'active')}`} key={index} onClick={() => setFilter(value)}>
-                                <i className={selectedFilters[filter.key] == value ? 'fa fa-check-circle' : 'fa fa-circle-o'} aria-hidden="true"></i>
+                            <button className={`filter-group-item ${(selectedFilters[filter.key] === value && 'active')}`} key={index} onClick={() => setFilter(value)} >
+                                <i className={selectedFilters[filter.key] === value ? 'fa fa-check-circle' : 'fa fa-circle-o'} aria-hidden="true"></i>
                                 <span>{value}</span>
-                            </div>
+                            </button>
                         )
                     })
                 }
             </div>
-        </div>
+        </article>
     )
 }
 

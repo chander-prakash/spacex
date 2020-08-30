@@ -1,12 +1,16 @@
 /* eslint-disable indent */
-import React from 'react'
+import React, { lazy, Suspense } from 'react'
+import Loader from './../common/Loader'
+
+const Img = lazy(() => import('./Img'))
 
 const Mission = ({ mission, index }: any) => {
     return (
-        <div className="spacex-mission">
+        <article className="spacex-mission" aria-label="Mission">
             <div className="img-group">
-                <img src={(mission.links.mission_patch_small) ? mission.links.mission_patch_small : 'images/not_available.png'}
-                    alt={(mission.details) ? mission.details : mission.rocket.rocket_name} />
+                <Suspense fallback={<Loader />}>
+                    <Img src={mission.links.mission_patch_small} alt={mission.details} name={mission.rocket.rocket_name} />
+                </Suspense>
             </div>
 
             <div className="mission-info title">
@@ -40,11 +44,11 @@ const Mission = ({ mission, index }: any) => {
                     {mission.launch_success ? <i className="fa fa-check-circle success"></i> : <i className="fa fa-times-circle-o failed"></i>}
                 </div>
             </div>
-            <div className="mission-info">
+            {/* <div className="mission-info">
                 <div className="label">Successfull Landing:</div>
                 {mission.launch_success ? <i className="fa fa-check-circle success"></i> : <i className="fa fa-times-circle-o failed"></i>}
-            </div>
-        </div>
+            </div> */}
+        </article>
     )
 }
 
